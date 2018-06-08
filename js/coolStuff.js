@@ -157,7 +157,7 @@ function looping(arr) {
     for(i=0; i < arr.length; i++){
         
         $('#gallery').append(
-    "<div class='card " + arr[i].category + "'><div class='card-body'><p><a data-fancybox data-animation-duration='700' data-src='#modal" + i + "' href='javascript:;' class='portLink'><img src='img/" + arr[i].thumb + "'></a></p><div style='display: none;' id='modal" + i + "' class='animated-modal'><img src='img/" + arr[i].full + "'><h2>" + arr[i].heading + "</h2><p><b class='portBold'>" + arr[i].blurb + "<br>" + arr[i].link + "</p></div></div></div>"
+    "<div class='card " + arr[i].category + "'><div class='card-body col-xs-12 col-sm-4'><p><a data-fancybox data-animation-duration='700' data-src='#modal" + i + "' href='javascript:;' class='portLink'><img src='img/" + arr[i].thumb + "'></a></p><div style='display: none;' id='modal" + i + "' class='animated-modal'><img src='img/" + arr[i].full + "'><h2>" + arr[i].heading + "</h2><p><b class='portBold'>" + arr[i].blurb + "<br>" + arr[i].link + "</p></div></div></div>"
         )
     }
 };

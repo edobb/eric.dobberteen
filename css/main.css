@@ -364,16 +364,16 @@ b.skill{font-size: 16px;}
 
 @media(max-width:640px){
 #gallery>div img{
-	max-width: 362px;
-	max-height: 85px;
+	/* max-width: 362px; */
+	/* max-height: 85px; */
 	margin: 1px;
 	width: 100%;
 }
 }
 @media(max-width:990px){
 #gallery>div img{
-	max-width: 362px;
-	max-height: 104px;
+	/* max-width: 362px; */
+	/* max-height: 104px; */
 	margin: 1px;
 	width: 100%;
 }
@@ -961,9 +961,9 @@ a.back{
 
 .portLink{
 	background-size:cover;
-	width:33%;
+	/* width:33%; */
 	height: auto;
-	float:left;
+	/* float:left; */
 	overflow: hidden;
 }
 
@@ -1043,8 +1043,8 @@ line-height:1.4;
 @media(min-width:990px){
 
 #gallery>div img{
-	max-width: 362px;
-	max-height: 241px;
+	/* max-width: 362px; */
+	max-height: 225px;
 	margin: 1px;
 	width: 100%;
 }
