@@ -81,6 +81,14 @@ var devProjects = [
         heading: "Web Design & Development",
         blurb: "Local attorney website design, photography, development, PPC",
         link: "<a href='http://sandiegodivorceattorney.net' target='_blank'>SanDiegoDivorceAttorney.net</a>"
+    },
+    {
+        category : "development",
+        thumb: "airtools-thumb.jpg",
+        full: "airtools-full.jpg",
+        heading: "Web Design & Development",
+        blurb: "Local industrial air tool distributor website design,  development, BigCommerce platform",
+        link: "<a href='http://intlairtool.com/' target='_blank'>IntlAirTools.com</a>"
     }
 ]
 var designProjects = [
@@ -144,39 +152,47 @@ var marketingProjects = [
     }
 ]
 
-function looping() {
+function looping(arr) {
 
-    for(i=0; i < projects.length; i++){
+    for(i=0; i < arr.length; i++){
         
         $('#gallery').append(
-    "<div class='card " + projects[i].category + "'><div class='card-body'><p><a data-fancybox data-animation-duration='700' data-src='#modal" + i + "' href='javascript:;' class='portLink'><img src='img/" + projects[i].thumb + "'></a></p><div style='display: none;' id='modal" + i + "' class='animated-modal'><img src='img/" + projects[i].full + "'><h2>" + projects[i].heading + "</h2><p><b class='portBold'>" + projects[i].blurb + "<br>" + projects[i].link + "</p></div></div></div>"
+    "<div class='card " + arr[i].category + "'><div class='card-body'><p><a data-fancybox data-animation-duration='700' data-src='#modal" + i + "' href='javascript:;' class='portLink'><img src='img/" + arr[i].thumb + "'></a></p><div style='display: none;' id='modal" + i + "' class='animated-modal'><img src='img/" + arr[i].full + "'><h2>" + arr[i].heading + "</h2><p><b class='portBold'>" + arr[i].blurb + "<br>" + arr[i].link + "</p></div></div></div>"
         )
     }
 };
 
-looping();
-
+looping(projects);
 
 $( "#development" ).click(function() {
-    $( ".design" ).hide( "fade" );
-    $( ".marketing" ).hide( "fade" );
-    $( ".development:hidden" ).show( "fade" );
+    $(".card").fadeOut( function(){
+
+        $( "#gallery" ).html("");
+        $("#gallery").append(looping(devProjects));
+    });
 });
 $( "#design" ).click(function() {
-    $( ".development" ).hide( "fade" );
-    $( ".design" ).show( "fade" );
-    $( ".marketing" ).hide( "fade" );
+    $(".card").hide( 'fade' , function(){
+
+        $( "#gallery" ).html("");
+        $("#gallery").append(looping(designProjects));
+    });
 });
 $( "#marketing" ).click(function() {
-    $( ".development" ).hide( "fade" );
-    $( ".design" ).hide( "fade" );
-    $( ".marketing" ).show( "fade" );
+    $(".card").hide( 'fade' , function(){
+
+        $( "#gallery" ).html("");
+        $("#gallery").append(looping(marketingProjects));
+    });
 });
 $( "#everything" ).click(function() {
-    $( ".development" ).show( "slow" );
-    $( ".design" ).show( "slow" );
-    $( ".marketing" ).show( "slow" );
+    $(".card").hide( 'fade' , function(){
+
+        $( "#gallery" ).html("");
+        $("#gallery").append(looping(projects));
+    });
 });
+
 
 
 $(window).scroll(function () {

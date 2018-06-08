@@ -63,9 +63,7 @@ h3, .h3{
 	color: #ccc;	
 }
 
-h4{
 
-}
 @media(min-width:480px){
 h1, .h1{
 	font-size: 39px;
@@ -101,11 +99,6 @@ h3, .h3{
 	font-weight: 400;
 	color: #ccc;	
 }
-
-h4{
-
-}
-
 
 	
 }
@@ -359,6 +352,9 @@ b.skill{font-size: 16px;}
 }
 }
 
+#gallery{
+	min-height: 488px;
+}
 
 #gallery>div{
 	padding-left:0;
@@ -366,13 +362,22 @@ b.skill{font-size: 16px;}
 
 }
 
+@media(max-width:640px){
 #gallery>div img{
 	max-width: 362px;
-	max-height: 243px;
+	max-height: 85px;
 	margin: 1px;
 	width: 100%;
 }
-
+}
+@media(max-width:990px){
+#gallery>div img{
+	max-width: 362px;
+	max-height: 104px;
+	margin: 1px;
+	width: 100%;
+}
+}
 .padded{
 	margin:0 10px;
 }
@@ -1021,9 +1026,37 @@ line-height:1.4;
 	font-weight: 500;
 }
 
-.text-center a{
-	margin-top:20px;
-	color:#F6BB42;
-	font-weight:600;
+.text-center button{
+	margin-top: 20px;
+	color:#fff;
+	font-weight:200;
+	font-size:10px;
+	min-width: 05px;
+	border:1px solid #F6BB42;
+	background-color:#000;
+}
+
+.text-center button:hover{
+	color: #ccc !important;
+}
+
+@media(min-width:990px){
+
+#gallery>div img{
+	max-width: 362px;
+	max-height: 241px;
+	margin: 1px;
+	width: 100%;
+}
+
+
+.text-center button{
+	margin-top: 40px;
+	color:#fff;
+	font-weight:200;
 	font-size:14px;
+	min-width: 105px;
+	border:2px solid #F6BB42;
+	background-color:#000;
+}
 }
